@@ -5,35 +5,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorService {
 
-    public String Welcome() {
-        return "Добро пожаловать в калькулятор";
-    }
-    public String plus(String num1, String num2){
-        int num_1 = Integer.parseInt(num1);
-        int num_2 = Integer.parseInt(num2);
-        int num12 = num_1 + num_2;
-        String result = String.valueOf(num12);
+    public int plus(int num1, int num2){
+        int result = num1 + num2;
         return  result;
     }
-    public String minus(String num1, String num2){
-        int num_1 = Integer.parseInt(num1);
-        int num_2 = Integer.parseInt(num2);
-        int num12 = num_1 - num_2;
-        String result = String.valueOf(num12);
+    public int minus(int num1, int num2){
+        int result = num1 - num2;
         return  result;
     }
-    public String multiply(String num1, String num2){
-        int num_1 = Integer.parseInt(num1);
-        int num_2 = Integer.parseInt(num2);
-        int num12 = num_1 * num_2;
-        String result = String.valueOf(num12);
+    public int multiply(int num1, int num2){
+        int result = num1 * num2;
         return  result;
     }
-    public String divide(String num1, String num2)  {
-        double num_1 = Integer.parseInt(num1);
-        double num_2 = Integer.parseInt(num2);
-        double num12 = num_1 / num_2;
-        String result = String.valueOf(num12);
+    public double divide(int num1, int num2)  {
+        double result = (double)num1 / num2;
         return  result;
     }
 }
